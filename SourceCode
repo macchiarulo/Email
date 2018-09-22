@@ -1,0 +1,21 @@
+# Email
+Sub send()
+Dim aOutlook As Object
+Dim aEmail As Object
+Dim strRecipients As String
+
+'-------------------------Create Object---------------------------
+Set aOutlook = CreateObject("Outlook.Application")
+Set aEmail = aOutlook.CreateItem(0)
+'-------------------------Send & CC-----------------------------
+strRecipients = "[enter recipient email here]"
+aEmail.CC = "[enter cc email here]"
+'-------------------------Subject-----------------------------
+aEmail.Subject = "[enter subject line here]"
+'-------------------------Importance-----------------------------
+aEmail.Importance = 2
+'-------------------------Body-----------------------------
+aEmail.HTMLBody = "[enter body here]"
+
+End Sub
+
